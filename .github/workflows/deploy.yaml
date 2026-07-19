@@ -50,6 +50,7 @@ jobs:
             put -O '${DIR}homepage' 'homepage/index.php';
             put -O '${DIR}homepage' 'homepage/contact.php';
             put -O '${DIR}homepage/images' 'homepage/images/soul-mirror-reading.png';
+            put -O '${DIR}homepage/images' 'homepage/images/divine-wealth-path-reading.png';
             put -O '${DIR}content' 'content/privacy-policy.php';
             put -O '${DIR}content' 'content/terms-conditions.php';
             put -O '${DIR}content' 'content/refund-return-policy.php';

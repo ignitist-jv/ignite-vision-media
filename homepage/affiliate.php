@@ -193,7 +193,7 @@
     <h1 class="hero-title">Promote offers that <span class="accent">change lives</span>, and get paid for it.</h1>
     <p class="hero-sub">Whether you are a seasoned marketer or just getting started, everything you need is here: tracked affiliate links, swipe files, and creatives for every one of our high-converting personal development offers.</p>
     <div class="hero-chips">
-      <span class="chip"><span class="dot"></span>5 live offers</span>
+      <span class="chip"><span class="dot"></span>6 live offers</span>
       <span class="chip"><span class="dot"></span>Swipes &amp; creatives included</span>
       <span class="chip"><span class="dot"></span>Tracked hoplinks</span>
     </div>
@@ -254,6 +254,21 @@
           <h3>Wealth Ancestry Prayer</h3>
           <p>An ancestral prayer ritual for clearing hidden blocks to abundance.</p>
           <a class="cta" href="https://wealthancestryprayer.com/affiliate/" target="_blank" rel="noopener">Access Affiliate Tools
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Divine Wealth Path Reading -->
+      <article class="card">
+        <div class="card-media wide">
+          <img src="images/divine-wealth-path-reading.png" alt="Divine Wealth Path Reading" />
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Astrology · Wealth</span>
+          <h3>Divine Wealth Path Reading</h3>
+          <p>A personalized astrology reading that maps the visitor's path to wealth and abundance.</p>
+          <a class="cta" href="https://divinewealthpathreading.com/affiliate" target="_blank" rel="noopener">Access Affiliate Tools
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
