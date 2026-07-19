@@ -234,7 +234,7 @@
       <article class="card">
         <div class="card-media wide">
           <span class="badge">New</span>
-          <img src="images/soul-mirror-reading.png" alt="Soul Mirror Reading" />
+          <img src="images/soul-mirror-reading.png?v=2" alt="Soul Mirror Reading" />
         </div>
         <div class="card-body">
           <span class="card-tag">Tarot · Reading</span>
