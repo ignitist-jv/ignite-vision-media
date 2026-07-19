@@ -269,20 +269,6 @@
         </div>
       </article>
 
-      <article class="card">
-        <div class="card-media">
-          <img src="images/wealth-ancestry-prayer.png" alt="Wealth Ancestry Prayer" />
-        </div>
-        <div class="card-body">
-          <span class="card-tag">Faith · Wealth</span>
-          <h3>Wealth Ancestry Prayer</h3>
-          <p>An ancestral prayer ritual for clearing hidden blocks to abundance.</p>
-          <a class="cta" href="https://wealthancestryprayer.com/affiliate/" target="_blank" rel="noopener">Access Affiliate Tools
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
       <!-- Divine Wealth Path Reading -->
       <article class="card">
         <div class="card-media wide">
@@ -293,6 +279,20 @@
           <h3>Divine Wealth Path Reading</h3>
           <p>A personalized astrology reading that maps the visitor's path to wealth and abundance.</p>
           <a class="cta" href="https://divinewealthpathreading.com/affiliate" target="_blank" rel="noopener">Access Affiliate Tools
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="images/wealth-ancestry-prayer.png" alt="Wealth Ancestry Prayer" />
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Faith · Wealth</span>
+          <h3>Wealth Ancestry Prayer</h3>
+          <p>An ancestral prayer ritual for clearing hidden blocks to abundance.</p>
+          <a class="cta" href="https://wealthancestryprayer.com/affiliate/" target="_blank" rel="noopener">Access Affiliate Tools
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
