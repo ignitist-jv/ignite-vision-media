@@ -79,6 +79,11 @@
   .ccard .prole{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-top:2px}
   .ccard .person + .mail{margin-top:12px}
   .ccard .mail{margin-top:auto;color:var(--lime-dim);font-weight:600;font-size:15px;word-break:break-word}
+  .ccard .tg{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    font-weight:600;font-size:14.5px;color:var(--lime);background:rgba(190,242,100,.10);
+    border:1px solid rgba(190,242,100,.28);padding:9px 15px;border-radius:999px;transition:background .2s,transform .2s}
+  .ccard .tg:hover{background:rgba(190,242,100,.18);transform:translateY(-1px)}
+  .ccard .tg svg{width:16px;height:16px;flex:none}
   .ccard address{font-style:normal;color:var(--ink);font-size:15px;line-height:1.65;margin-top:auto}
   @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
   @media(max-width:560px){.nav-link.hide-sm{display:none}}
@@ -123,6 +128,10 @@
         <div class="prole">Affiliate contact</div>
       </div>
       <a class="mail" href="mailto:affiliate@ignitevisionmedia.com">affiliate@ignitevisionmedia.com</a>
+      <a class="tg" href="https://t.me/raybizdev" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3L2 10.5l6.5 2.5L11 20l3-4.5L21 21z"/><path d="M8.5 13L21 3"/></svg>
+        Message Ray on Telegram
+      </a>
     </div>
   </div>
 </main>
