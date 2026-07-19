@@ -67,7 +67,7 @@
     border-radius:14px;padding:16px 18px;display:inline-block;margin:14px 0;line-height:1.7}
   .prose .updated{font-size:13.5px;color:var(--faint);letter-spacing:.02em}
   /* contact */
-  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:8px;max-width:760px}
   .ccard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
   .ccard .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(190,242,100,.12);
     color:var(--lime);border:1px solid rgba(190,242,100,.25)}
@@ -115,12 +115,6 @@
       <h3>Affiliate support</h3>
       <p>Promoting our offers? Reach the partnerships team here.</p>
       <a class="mail" href="mailto:affiliate@ignitevisionmedia.com">affiliate@ignitevisionmedia.com</a>
-    </div>
-    <div class="ccard">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <h3>Mailing address</h3>
-      <p>Returns and postal correspondence.</p>
-      <address>205/124 James Street<br>Leichhardt, NSW 2040<br>Australia</address>
     </div>
   </div>
 </main>
