@@ -74,6 +74,10 @@
   .ccard .ic svg{width:22px;height:22px}
   .ccard h3{font-family:var(--display);font-weight:600;font-size:19px;margin:18px 0 6px}
   .ccard p{color:var(--muted);font-size:14.5px;margin:0 0 18px}
+  .ccard .person{margin-top:auto;padding-top:6px}
+  .ccard .pname{font-family:var(--display);font-weight:600;font-size:16.5px;color:var(--ink)}
+  .ccard .prole{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-top:2px}
+  .ccard .person + .mail{margin-top:12px}
   .ccard .mail{margin-top:auto;color:var(--lime-dim);font-weight:600;font-size:15px;word-break:break-word}
   .ccard address{font-style:normal;color:var(--ink);font-size:15px;line-height:1.65;margin-top:auto}
   @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
@@ -113,7 +117,11 @@
     <div class="ccard">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
       <h3>Affiliate support</h3>
-      <p>Promoting our offers? Reach the partnerships team here.</p>
+      <p>Promoting our offers? Ray Hill is your point of contact for all affiliate and partnership questions.</p>
+      <div class="person">
+        <div class="pname">Ray Hill</div>
+        <div class="prole">Affiliate contact</div>
+      </div>
       <a class="mail" href="mailto:affiliate@ignitevisionmedia.com">affiliate@ignitevisionmedia.com</a>
     </div>
   </div>
