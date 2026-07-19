@@ -1,30 +1,51 @@
-name: Deploy to ignitevisionmedia.com
+name: Deploy affiliate hub to ignitevisionmedia.com
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'homepage/affiliate.php'
+      - 'homepage/images/**'
   workflow_dispatch:
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: FTP deploy to web root
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server:   ${{ secrets.FTP_SERVER }}      # e.g. ftp.ignitevisionmedia.com
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}   # ftp | ftps | sftp
-          port:     ${{ vars.FTP_PORT || '21' }}
-          # Repo root maps onto the site web root, so repo/homepage -> webroot/homepage
-          local-dir:  ./
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}       # e.g. /public_html/  (MUST end with a slash)
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            README.md
+      - name: Guard - skip if FTP secrets are not configured
+        id: guard
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          if [ -z "$FTP_SERVER" ]; then
+            echo "FTP_SERVER secret not set - skipping deploy (configure repo secrets first)."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Surgical FTPS upload (only the 2 changed files, no deletions)
+        if: steps.guard.outputs.ready == 'true'
+        env:
+          FTP_SERVER:   ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_DIR:      ${{ secrets.FTP_SERVER_DIR }}   # web root, e.g. /public_html/  (must end with /)
+          FTP_PORT:     ${{ vars.FTP_PORT || '21' }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          DIR="${FTP_DIR:-/public_html/}"
+          lftp -c "
+            set ftp:ssl-force true;
+            set ftp:ssl-protect-data true;
+            set ssl:verify-certificate no;
+            open -p ${FTP_PORT} -u '${FTP_USERNAME}','${FTP_PASSWORD}' '${FTP_SERVER}';
+            put -O '${DIR}homepage' 'homepage/affiliate.php';
+            put -O '${DIR}homepage/images' 'homepage/images/soul-mirror-reading.png';
+            cls -l '${DIR}homepage/affiliate.php';
+            bye
+          "
+          echo "Uploaded homepage/affiliate.php + homepage/images/soul-mirror-reading.png"
