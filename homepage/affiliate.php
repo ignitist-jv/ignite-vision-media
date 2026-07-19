@@ -233,7 +233,6 @@
     <div class="grid">
       <article class="card">
         <div class="card-media wide">
-          <span class="badge">New</span>
           <img src="images/soul-mirror-reading.png?v=2" alt="Soul Mirror Reading" />
         </div>
         <div class="card-body">
@@ -248,7 +247,6 @@
 
       <article class="card">
         <div class="card-media">
-          <span class="badge">New</span>
           <img src="images/wealth-ancestry-prayer.png" alt="Wealth Ancestry Prayer" />
         </div>
         <div class="card-body">
@@ -263,7 +261,6 @@
 
       <article class="card">
         <div class="card-media">
-          <span class="badge">New</span>
           <img src="images/infinite-wealth-code-reading.png" alt="Infinite Wealth Code Reading" />
         </div>
         <div class="card-body">
@@ -307,7 +304,7 @@
       <article class="card" style="border-style: dashed; background: transparent;">
         <div class="card-body" style="align-items: center; justify-content: center; text-align: center; min-height: 260px;">
           <span class="card-tag" style="color: var(--lime);">More soon</span>
-          <h3 style="margin-top:10px;">New offers on the way</h3>
+          <h3 style="margin-top:10px;">More offers on the way</h3>
           <p>We add high-converting offers regularly. Check back or contact us for early access.</p>
           <a class="cta" href="contact.php" style="background: transparent; color: var(--lime); border: 1px solid var(--line-2);">Contact the team
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
