@@ -232,7 +232,7 @@
 
     <div class="grid">
       <article class="card">
-        <div class="card-media">
+        <div class="card-media wide">
           <span class="badge">New</span>
           <img src="images/soul-mirror-reading.png" alt="Soul Mirror Reading" />
         </div>

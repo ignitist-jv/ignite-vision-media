@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'homepage/affiliate.php'
+      - 'homepage/index.php'
       - 'homepage/images/**'
   workflow_dispatch:
 
@@ -44,8 +45,9 @@ jobs:
             set ssl:verify-certificate no;
             open -p ${FTP_PORT} -u '${FTP_USERNAME}','${FTP_PASSWORD}' '${FTP_SERVER}';
             put -O '${DIR}homepage' 'homepage/affiliate.php';
+            put -O '${DIR}homepage' 'homepage/index.php';
             put -O '${DIR}homepage/images' 'homepage/images/soul-mirror-reading.png';
-            cls -l '${DIR}homepage/affiliate.php';
+            cls -l '${DIR}homepage/affiliate.php' '${DIR}homepage/index.php';
             bye
           "
-          echo "Uploaded homepage/affiliate.php + homepage/images/soul-mirror-reading.png"
+          echo "Uploaded homepage/affiliate.php + homepage/index.php + homepage/images/soul-mirror-reading.png"
