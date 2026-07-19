@@ -164,6 +164,30 @@
     .grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+  /* affiliate contact band */
+  .contact-band { padding: 40px 0 8px; }
+  .cb-inner {
+    position: relative; overflow: hidden;
+    background: linear-gradient(180deg, var(--surface), var(--bg-2));
+    border: 1px solid var(--line); border-radius: 24px;
+    padding: 44px 40px; text-align: center;
+  }
+  .cb-inner .cb-glow { position: absolute; inset: -60% 20% auto 20%; height: 260px;
+    background: radial-gradient(closest-side, rgba(190,242,100,0.16), transparent); pointer-events: none; }
+  .cb-inner .eyebrow { justify-content: center; position: relative; }
+  .cb-inner h2 { position: relative; font-family: var(--display); font-weight: 600; letter-spacing: -0.02em;
+    font-size: clamp(26px, 3.6vw, 38px); margin: 12px 0 0; text-wrap: balance; }
+  .cb-inner p { position: relative; color: var(--muted); font-size: 16px; max-width: 52ch; margin: 12px auto 0; }
+  .cb-actions { position: relative; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-top: 26px; }
+  .cb-tg { display: inline-flex; align-items: center; gap: 9px; font-weight: 650; font-size: 15.5px;
+    color: var(--bg); background: var(--lime); padding: 13px 22px; border-radius: 999px; transition: background .2s, gap .2s; }
+  .cb-tg:hover { background: #cdf87f; gap: 13px; }
+  .cb-tg svg { width: 17px; height: 17px; }
+  .cb-mail { color: var(--lime-dim); font-weight: 600; font-size: 15px; word-break: break-word; }
+  .cb-mail:hover { color: var(--ink); }
+  .cb-name { position: relative; margin-top: 18px; color: var(--faint); font-size: 13.5px; letter-spacing: .02em; }
+  .cb-name strong { color: var(--ink); font-weight: 650; }
 </style>
 </head>
 <body>
@@ -326,6 +350,25 @@
           </a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact-band">
+  <div class="wrap">
+    <div class="cb-inner">
+      <div class="cb-glow"></div>
+      <span class="eyebrow">Affiliate support</span>
+      <h2>Questions? Talk to Ray.</h2>
+      <p>Ray Hill is your point of contact for all affiliate and partnership questions. Reach him directly on Telegram, or by email.</p>
+      <div class="cb-actions">
+        <a class="cb-tg" href="https://t.me/raybizdev" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3L2 10.5l6.5 2.5L11 20l3-4.5L21 21z"/><path d="M8.5 13L21 3"/></svg>
+          Message Ray on Telegram
+        </a>
+        <a class="cb-mail" href="mailto:affiliate@ignitevisionmedia.com">affiliate@ignitevisionmedia.com</a>
+      </div>
+      <p class="cb-name"><strong>Ray Hill</strong> · Affiliate contact</p>
     </div>
   </div>
 </section>
