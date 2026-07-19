@@ -1,1179 +1,145 @@
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-        <title>Ignite Vision Media</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="facebook-domain-verification" content="a2vy365mtbvzeexy4s04w0gbedepe6" />
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet"/>
-        <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&amp;display=swap" rel="stylesheet"/>
-        <!-- <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/> -->
-         <script src="https://cdn.tailwindcss.com"></script>
-         <script>
-            tailwind.config = {
-                theme: {
-                    container: {
-                        center: true,
-                        screens: {
-                            sm: '640px',
-                            md: '768px',
-                            lg: '1024px',
-                            xl: '1280px',
-                        },
-                    },
-                    extend: {
-                        animation: {
-                            'spin-slow': 'spin 20s linear infinite',
-                        },
-                    },
-                },
-                presets: [
-                {
-                    "theme": {
-                        "extend": {
-                            "screens": {
-                                "sm": "640px",
-                                "md": "768px",
-                                "lg": "1024px",
-                                "xl": "1280px",
-                                "2xl": "1536px"
-                            },
-                            "colors": {
-                                "transparent": "transparent",
-                                "current": "currentColor",
-                                "black": "#000",
-                                "white": "#fff",
-                                "red": {
-                                    "50": "#FFF1F1",
-                                    "100": "#FFDFDF",
-                                    "200": "#FFC5C5",
-                                    "300": "#FF9D9D",
-                                    "400": "#FF6464",
-                                    "500": "#FF1E1E",
-                                    "600": "#ED1515",
-                                    "700": "#C80D0D",
-                                    "800": "#A50F0F",
-                                    "900": "#881414"
-                                },
-                                "green": {
-                                    "50": "#FDFFE4",
-                                    "100": "#F9FFC4",
-                                    "200": "#F1FF90",
-                                    "300": "#E2FF50",
-                                    "400": "#CCFF00",
-                                    "500": "#B2E600",
-                                    "600": "#8AB800",
-                                    "700": "#688B00",
-                                    "800": "#526D07",
-                                    "900": "#455C0B"
-                                },
-                                "gray": {
-                                    "50": "#F6F6F6",
-                                    "100": "#E7E7E7",
-                                    "200": "#D1D1D1",
-                                    "300": "#B0B0B0",
-                                    "400": "#888888",
-                                    "500": "#6D6D6D",
-                                    "600": "#5D5D5D",
-                                    "700": "#4C4C4C",
-                                    "800": "#454545",
-                                    "900": "#3D3D3D"
-                                },
-                                "blueGray": {
-                                    "50": "#F4F6F7",
-                                    "100": "#E4E7E9",
-                                    "200": "#CBD1D6",
-                                    "300": "#A7B0B9",
-                                    "400": "#7B8795",
-                                    "500": "#606C7A",
-                                    "600": "#535B67",
-                                    "700": "#474E57",
-                                    "800": "#3F434B",
-                                    "900": "#383C41"
-                                }
-                            },
-                            "spacing": {
-                                "0": "0px",
-                                "1": "0.25rem",
-                                "2": "0.5rem",
-                                "3": "0.75rem",
-                                "4": "1rem",
-                                "5": "1.25rem",
-                                "6": "1.5rem",
-                                "7": "1.75rem",
-                                "8": "2rem",
-                                "9": "2.25rem",
-                                "10": "2.5rem",
-                                "11": "2.75rem",
-                                "12": "3rem",
-                                "14": "3.5rem",
-                                "16": "4rem",
-                                "20": "5rem",
-                                "24": "6rem",
-                                "28": "7rem",
-                                "32": "8rem",
-                                "36": "9rem",
-                                "40": "10rem",
-                                "44": "11rem",
-                                "48": "12rem",
-                                "52": "13rem",
-                                "56": "14rem",
-                                "60": "15rem",
-                                "64": "16rem",
-                                "72": "18rem",
-                                "80": "20rem",
-                                "96": "24rem",
-                                "px": "1px",
-                                "0.5": "0.125rem",
-                                "1.5": "0.375rem",
-                                "2.5": "0.625rem",
-                                "3.5": "0.875rem"
-                            },
-                            "animation": {
-                                "none": "none",
-                                "spin": "spin 1s linear infinite",
-                                "ping": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
-                                "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-                                "bounce": "bounce 1s infinite"
-                            },
-                            "backdropBlur": (theme) => theme("blur"),
-                            "backdropBrightness": (theme) => theme("brightness"),
-                            "backdropContrast": (theme) => theme("contrast"),
-                            "backdropGrayscale": (theme) => theme("grayscale"),
-                            "backdropHueRotate": (theme) => theme("hueRotate"),
-                            "backdropInvert": (theme) => theme("invert"),
-                            "backdropOpacity": (theme) => theme("opacity"),
-                            "backdropSaturate": (theme) => theme("saturate"),
-                            "backdropSepia": (theme) => theme("sepia"),
-                            "backgroundColor": theme => ({
-            ...theme("colors"),
-            body: "#0E0F11",
-                }),
-                                "backgroundImage": {
-                                    "none": "none",
-                                    "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
-                                    "gradient-to-tr": "linear-gradient(to top right, var(--tw-gradient-stops))",
-                                    "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
-                                    "gradient-to-br": "linear-gradient(to bottom right, var(--tw-gradient-stops))",
-                                    "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-                                    "gradient-to-bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
-                                    "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
-                                    "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
-                                    "gradient-radial-dark": "radial-gradient(72.20% 78.49% at 49.87% 50.10%, rgba(71, 80, 98, 0.26) 0%, rgba(137, 137, 137, 0.00) 100%)",
-                                    "gradient-radial-dark-light": "radial-gradient(80.63% 80.22% at 52.97% 50.00%, rgba(71, 80, 98, 0.46) 0%, rgba(137, 137, 137, 0.00) 100%)",
-                                    "gradient-radial-light": "radial-gradient(90.27% 103.98% at 73.03% 35.14%, rgba(232, 239, 254, 0.26) 0%, rgba(51, 56, 65, 0.13) 100%)",
-                                    "gradient-radial-darker": "linear-gradient(180deg, #0E0F11 0%, rgba(14, 15, 17, 0.00) 100%)",
-                                    "gradient-radial-darker3": "linear-gradient(0deg, #0E0F11 0%, rgba(14, 15, 17, 0.00) 100%)",
-                                    "gradient-radial-darker2": "linear-gradient(270deg, #0E0F11 0%, rgba(14, 15, 17, 0.00) 100%)",
-                                    "gradient-card": "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.00) 6.77%, #000 100%)"
-                                },
-                                "backgroundOpacity": (theme) => theme("opacity"),
-                                "backgroundPosition": {
-                                    "bottom": "bottom",
-                                    "center": "center",
-                                    "left": "left",
-                                    "left-bottom": "left bottom",
-                                    "left-top": "left top",
-                                    "right": "right",
-                                    "right-bottom": "right bottom",
-                                    "right-top": "right top",
-                                    "top": "top"
-                                },
-                                "backgroundSize": {
-                                    "auto": "auto",
-                                    "cover": "cover",
-                                    "contain": "contain"
-                                },
-                                "blur": {
-                                    "0": "0",
-                                    "none": "0",
-                                    "sm": "4px",
-                                    "DEFAULT": "8px",
-                                    "md": "12px",
-                                    "lg": "16px",
-                                    "xl": "24px",
-                                    "2xl": "40px",
-                                    "3xl": "64px"
-                                },
-                                "brightness": {
-                                    "0": "0",
-                                    "50": ".5",
-                                    "75": ".75",
-                                    "90": ".9",
-                                    "95": ".95",
-                                    "100": "1",
-                                    "105": "1.05",
-                                    "110": "1.1",
-                                    "125": "1.25",
-                                    "150": "1.5",
-                                    "200": "2"
-                                },
-                                "borderColor": (theme) => ({
-                ...theme("colors"),
-                DEFAULT: theme("colors.gray.200", "currentColor"),
-                }),
-                                "borderOpacity": (theme) => theme("opacity"),
-                                "borderRadius": {
-                                    "none": "0px",
-                                    "sm": "0.125rem",
-                                    "DEFAULT": "0.25rem",
-                                    "md": "0.375rem",
-                                    "lg": "0.5rem",
-                                    "xl": "0.75rem",
-                                    "2xl": "1rem",
-                                    "3xl": "1.25rem",
-                                    "4xl": "1.5rem",
-                                    "5xl": "1.875rem",
-                                    "6xl": "3.125rem",
-                                    "7xl": "5rem",
-                                    "full": "9999px"
-                                },
-                                "borderWidth": {
-                                    "0": "0px",
-                                    "2": "2px",
-                                    "4": "4px",
-                                    "8": "8px",
-                                    "DEFAULT": "1px"
-                                },
-                                "boxShadow": {
-                                    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-                                    "DEFAULT": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-                                    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                                    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                                    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                                    "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                                    "inner": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
-                                    "none": "none"
-                                },
-                                "caretColor": (theme) => theme("colors"),
-                                "contrast": {
-                                    "0": "0",
-                                    "50": ".5",
-                                    "75": ".75",
-                                    "100": "1",
-                                    "125": "1.25",
-                                    "150": "1.5",
-                                    "200": "2"
-                                },
-                                "container": [],
-                                "content": {
-                                    "none": "none"
-                                },
-                                "cursor": {
-                                    "auto": "auto",
-                                    "default": "default",
-                                    "pointer": "pointer",
-                                    "wait": "wait",
-                                    "text": "text",
-                                    "move": "move",
-                                    "help": "help",
-                                    "not-allowed": "not-allowed"
-                                },
-                                "divideColor": (theme) => theme("borderColor"),
-                                "divideOpacity": (theme) => theme("borderOpacity"),
-                                "divideWidth": (theme) => theme("borderWidth"),
-                                "dropShadow": {
-                                    "sm": "0 1px 1px rgba(0,0,0,0.05)",
-                                    "DEFAULT": [
-                                        "0 1px 2px rgba(0, 0, 0, 0.1)",
-                                        "0 1px 1px rgba(0, 0, 0, 0.06)"
-                                    ],
-                                    "md": [
-                                        "0 4px 3px rgba(0, 0, 0, 0.07)",
-                                        "0 2px 2px rgba(0, 0, 0, 0.06)"
-                                    ],
-                                    "lg": [
-                                        "0 10px 8px rgba(0, 0, 0, 0.04)",
-                                        "0 4px 3px rgba(0, 0, 0, 0.1)"
-                                    ],
-                                    "xl": [
-                                        "0 20px 13px rgba(0, 0, 0, 0.03)",
-                                        "0 8px 5px rgba(0, 0, 0, 0.08)"
-                                    ],
-                                    "2xl": "0 25px 25px rgba(0, 0, 0, 0.15)",
-                                    "checkbox": "0px 4px 14px rgba(204, 255, 0, 0.30)",
-                                    "none": "0 0 #0000"
-                                },
-                                "fill": {
-                                    "current": "currentColor"
-                                },
-                                "grayscale": {
-                                    "0": "0",
-                                    "DEFAULT": "100%"
-                                },
-                                "hueRotate": {
-                                    "0": "0deg",
-                                    "15": "15deg",
-                                    "30": "30deg",
-                                    "60": "60deg",
-                                    "90": "90deg",
-                                    "180": "180deg",
-                                    "-180": "-180deg",
-                                    "-90": "-90deg",
-                                    "-60": "-60deg",
-                                    "-30": "-30deg",
-                                    "-15": "-15deg"
-                                },
-                                "invert": {
-                                    "0": "0",
-                                    "DEFAULT": "100%"
-                                },
-                                "flex": {
-                                    "1": "1 1 0%",
-                                    "auto": "1 1 auto",
-                                    "initial": "0 1 auto",
-                                    "none": "none"
-                                },
-                                "flexGrow": {
-                                    "0": "0",
-                                    "DEFAULT": "1"
-                                },
-                                "flexShrink": {
-                                    "0": "0",
-                                    "DEFAULT": "1"
-                                },
-                                "fontFamily": {
-                                    "body": [
-                                        "\"Clash Grotesk\"",
-                                        "ui-sans-serif",
-                                        "system-ui",
-                                        "-apple-system",
-                                        "BlinkMacSystemFont",
-                                        "\"Segoe UI\"",
-                                        "Roboto",
-                                        "\"Helvetica Neue\"",
-                                        "Arial",
-                                        "\"Noto Sans\"",
-                                        "sans-serif",
-                                        "\"Apple Color Emoji\"",
-                                        "\"Segoe UI Emoji\"",
-                                        "\"Segoe UI Symbol\"",
-                                        "\"Noto Color Emoji\""
-                                    ],
-                                    "heading": [
-                                        "\"Clash Grotesk\"",
-                                        "ui-sans-serif",
-                                        "system-ui",
-                                        "-apple-system",
-                                        "BlinkMacSystemFont",
-                                        "\"Segoe UI\"",
-                                        "Roboto",
-                                        "\"Helvetica Neue\"",
-                                        "Arial",
-                                        "\"Noto Sans\"",
-                                        "sans-serif",
-                                        "\"Apple Color Emoji\"",
-                                        "\"Segoe UI Emoji\"",
-                                        "\"Segoe UI Symbol\"",
-                                        "\"Noto Color Emoji\""
-                                    ],
-                                    "sans": [
-                                        "ui-sans-serif",
-                                        "system-ui",
-                                        "-apple-system",
-                                        "BlinkMacSystemFont",
-                                        "\"Segoe UI\"",
-                                        "Roboto",
-                                        "\"Helvetica Neue\"",
-                                        "Arial",
-                                        "\"Noto Sans\"",
-                                        "sans-serif",
-                                        "\"Apple Color Emoji\"",
-                                        "\"Segoe UI Emoji\"",
-                                        "\"Segoe UI Symbol\"",
-                                        "\"Noto Color Emoji\""
-                                    ],
-                                    "serif": [
-                                        "ui-serif",
-                                        "Georgia",
-                                        "Cambria",
-                                        "\"Times New Roman\"",
-                                        "Times",
-                                        "serif"
-                                    ],
-                                    "mono": [
-                                        "ui-monospace",
-                                        "SFMono-Regular",
-                                        "Menlo",
-                                        "Monaco",
-                                        "Consolas",
-                                        "\"Liberation Mono\"",
-                                        "\"Courier New\"",
-                                        "monospace"
-                                    ]
-                                },
-                                "fontSize": {
-                                    "xs": [
-                                        "0.75rem",
-                                        {
-                                            "lineHeight": "1rem"
-                                        }
-                                    ],
-                                    "sm": [
-                                        "0.875rem",
-                                        {
-                                            "lineHeight": "1.25rem"
-                                        }
-                                    ],
-                                    "base": [
-                                        "1rem",
-                                        {
-                                            "lineHeight": "1.5rem"
-                                        }
-                                    ],
-                                    "lg": [
-                                        "1.125rem",
-                                        {
-                                            "lineHeight": "1.75rem"
-                                        }
-                                    ],
-                                    "xl": [
-                                        "1.25rem",
-                                        {
-                                            "lineHeight": "1.75rem"
-                                        }
-                                    ],
-                                    "2xl": [
-                                        "1.5rem",
-                                        {
-                                            "lineHeight": "2rem"
-                                        }
-                                    ],
-                                    "3xl": [
-                                        "2rem",
-                                        {
-                                            "lineHeight": "2.25rem"
-                                        }
-                                    ],
-                                    "4xl": [
-                                        "2.5rem",
-                                        {
-                                            "lineHeight": "2.5rem"
-                                        }
-                                    ],
-                                    "5xl": [
-                                        "3rem",
-                                        {
-                                            "lineHeight": "1"
-                                        }
-                                    ],
-                                    "6xl": [
-                                        "3.5rem",
-                                        {
-                                            "lineHeight": "1"
-                                        }
-                                    ],
-                                    "7xl": [
-                                        "3.875rem",
-                                        {
-                                            "lineHeight": "1"
-                                        }
-                                    ],
-                                    "8xl": [
-                                        "4.5rem",
-                                        {
-                                            "lineHeight": "1"
-                                        }
-                                    ],
-                                    "9xl": [
-                                        "5rem",
-                                        {
-                                            "lineHeight": "1"
-                                        }
-                                    ],
-                                    "10xl": [
-                                        "6rem",
-                                        {
-                                            "lineHeight": "1"
-                                        }
-                                    ]
-                                },
-                                "fontWeight": {
-                                    "thin": "100",
-                                    "extralight": "200",
-                                    "light": "300",
-                                    "normal": "400",
-                                    "medium": "500",
-                                    "semibold": "600",
-                                    "bold": "700",
-                                    "extrabold": "800",
-                                    "black": "900"
-                                },
-                                "gap": (theme) => theme("spacing"),
-                                "gradientColorStops": (theme) => theme("colors"),
-                                "gridAutoColumns": {
-                                    "auto": "auto",
-                                    "min": "min-content",
-                                    "max": "max-content",
-                                    "fr": "minmax(0, 1fr)"
-                                },
-                                "gridAutoRows": {
-                                    "auto": "auto",
-                                    "min": "min-content",
-                                    "max": "max-content",
-                                    "fr": "minmax(0, 1fr)"
-                                },
-                                "gridColumn": {
-                                    "auto": "auto",
-                                    "span-1": "span 1 \/ span 1",
-                                    "span-2": "span 2 \/ span 2",
-                                    "span-3": "span 3 \/ span 3",
-                                    "span-4": "span 4 \/ span 4",
-                                    "span-5": "span 5 \/ span 5",
-                                    "span-6": "span 6 \/ span 6",
-                                    "span-7": "span 7 \/ span 7",
-                                    "span-8": "span 8 \/ span 8",
-                                    "span-9": "span 9 \/ span 9",
-                                    "span-10": "span 10 \/ span 10",
-                                    "span-11": "span 11 \/ span 11",
-                                    "span-12": "span 12 \/ span 12",
-                                    "span-full": "1 \/ -1"
-                                },
-                                "gridColumnEnd": {
-                                    "1": "1",
-                                    "2": "2",
-                                    "3": "3",
-                                    "4": "4",
-                                    "5": "5",
-                                    "6": "6",
-                                    "7": "7",
-                                    "8": "8",
-                                    "9": "9",
-                                    "10": "10",
-                                    "11": "11",
-                                    "12": "12",
-                                    "13": "13",
-                                    "auto": "auto"
-                                },
-                                "gridColumnStart": {
-                                    "1": "1",
-                                    "2": "2",
-                                    "3": "3",
-                                    "4": "4",
-                                    "5": "5",
-                                    "6": "6",
-                                    "7": "7",
-                                    "8": "8",
-                                    "9": "9",
-                                    "10": "10",
-                                    "11": "11",
-                                    "12": "12",
-                                    "13": "13",
-                                    "auto": "auto"
-                                },
-                                "gridRow": {
-                                    "auto": "auto",
-                                    "span-1": "span 1 \/ span 1",
-                                    "span-2": "span 2 \/ span 2",
-                                    "span-3": "span 3 \/ span 3",
-                                    "span-4": "span 4 \/ span 4",
-                                    "span-5": "span 5 \/ span 5",
-                                    "span-6": "span 6 \/ span 6",
-                                    "span-full": "1 \/ -1"
-                                },
-                                "gridRowStart": {
-                                    "1": "1",
-                                    "2": "2",
-                                    "3": "3",
-                                    "4": "4",
-                                    "5": "5",
-                                    "6": "6",
-                                    "7": "7",
-                                    "auto": "auto"
-                                },
-                                "gridRowEnd": {
-                                    "1": "1",
-                                    "2": "2",
-                                    "3": "3",
-                                    "4": "4",
-                                    "5": "5",
-                                    "6": "6",
-                                    "7": "7",
-                                    "auto": "auto"
-                                },
-                                "gridTemplateColumns": {
-                                    "1": "repeat(1, minmax(0, 1fr))",
-                                    "2": "repeat(2, minmax(0, 1fr))",
-                                    "3": "repeat(3, minmax(0, 1fr))",
-                                    "4": "repeat(4, minmax(0, 1fr))",
-                                    "5": "repeat(5, minmax(0, 1fr))",
-                                    "6": "repeat(6, minmax(0, 1fr))",
-                                    "7": "repeat(7, minmax(0, 1fr))",
-                                    "8": "repeat(8, minmax(0, 1fr))",
-                                    "9": "repeat(9, minmax(0, 1fr))",
-                                    "10": "repeat(10, minmax(0, 1fr))",
-                                    "11": "repeat(11, minmax(0, 1fr))",
-                                    "12": "repeat(12, minmax(0, 1fr))",
-                                    "none": "none"
-                                },
-                                "gridTemplateRows": {
-                                    "1": "repeat(1, minmax(0, 1fr))",
-                                    "2": "repeat(2, minmax(0, 1fr))",
-                                    "3": "repeat(3, minmax(0, 1fr))",
-                                    "4": "repeat(4, minmax(0, 1fr))",
-                                    "5": "repeat(5, minmax(0, 1fr))",
-                                    "6": "repeat(6, minmax(0, 1fr))",
-                                    "none": "none"
-                                },
-                                "height": (theme) => ({
-                auto: "auto",
-                ...theme("spacing"),
-                "1\/2": "50%",
-                "1\/3": "33.333333%",
-                "2\/3": "66.666667%",
-                "1\/4": "25%",
-                "2\/4": "50%",
-                "3\/4": "75%",
-                "1\/5": "20%",
-                "2\/5": "40%",
-                "3\/5": "60%",
-                "4\/5": "80%",
-                "1\/6": "16.666667%",
-                "2\/6": "33.333333%",
-                "3\/6": "50%",
-                "4\/6": "66.666667%",
-                "5\/6": "83.333333%",
-                full: "100%",
-                screen: "100vh",
-                }),
-                                "inset": (theme, { negative }) => ({
-                auto: "auto",
-                ...theme("spacing"),
-                ...negative(theme("spacing")),
-                "1\/2": "50%",
-                "1\/3": "33.333333%",
-                "2\/3": "66.666667%",
-                "1\/4": "25%",
-                "2\/4": "50%",
-                "3\/4": "75%",
-                full: "100%",
-                "-1\/2": "-50%",
-                "-1\/3": "-33.333333%",
-                "-2\/3": "-66.666667%",
-                "-1\/4": "-25%",
-                "-2\/4": "-50%",
-                "-3\/4": "-75%",
-                "-full": "-100%",
-                }),
-                                "keyframes": {
-                                    "spin": {
-                                        "to": {
-                                            "transform": "rotate(360deg)"
-                                        }
-                                    },
-                                    "ping": {
-                                        "75%, 100%": {
-                                            "transform": "scale(2)",
-                                            "opacity": "0"
-                                        }
-                                    },
-                                    "pulse": {
-                                        "50%": {
-                                            "opacity": ".5"
-                                        }
-                                    },
-                                    "bounce": {
-                                        "0%, 100%": {
-                                            "transform": "translateY(-25%)",
-                                            "animationTimingFunction": "cubic-bezier(0.8,0,1,1)"
-                                        },
-                                        "50%": {
-                                            "transform": "none",
-                                            "animationTimingFunction": "cubic-bezier(0,0,0.2,1)"
-                                        }
-                                    }
-                                },
-                                "letterSpacing": {
-                                    "10xl": "-4.8px",
-                                    "9xl": "-4px",
-                                    "8xl": "-3.6px",
-                                    "7xl": "-1.86px",
-                                    "6xl": "-1.44px",
-                                    "5xl": "-0.96px",
-                                    "4xl": "-2px",
-                                    "3xl": "-0.64px",
-                                    "2xl": "-0.48px",
-                                    "tighter": "-0.026em",
-                                    "tight": "-0.02em",
-                                    "normal": "0em",
-                                    "wide": "0.025em",
-                                    "wider": "0.05em",
-                                    "widest": "0.1em"
-                                },
-                                "lineHeight": {
-                                    "3": ".75rem",
-                                    "4": "1rem",
-                                    "5": "1.25rem",
-                                    "6": "1.5rem",
-                                    "7": "1.75rem",
-                                    "8": "2rem",
-                                    "9": "2.25rem",
-                                    "10": "2.5rem",
-                                    "none": "1",
-                                    "tight": "1.25",
-                                    "snug": "1.375",
-                                    "normal": "1.5",
-                                    "relaxed": "1.625",
-                                    "loose": "2"
-                                },
-                                "listStyleType": {
-                                    "none": "none",
-                                    "disc": "disc",
-                                    "decimal": "decimal"
-                                },
-                                "margin": (theme, { negative }) => ({
-                auto: "auto",
-                ...theme("spacing"),
-                ...negative(theme("spacing")),
-                }),
-                                "maxHeight": (theme) => ({
-                ...theme("spacing"),
-                full: "100%",
-                screen: "100vh",
-                }),
-                                "maxWidth": (theme, { breakpoints }) => ({
-                none: "none",
-                0: "0rem",
-                xs: "20rem",
-                sm: "24rem",
-                md: "28rem",
-                lg: "32rem",
-                xl: "36rem",
-                "2xl": "42rem",
-                "3xl": "48rem",
-                "4xl": "56rem",
-                "5xl": "64rem",
-                "6xl": "72rem",
-                "7xl": "80rem",
-                full: "100%",
-                min: "min-content",
-                max: "max-content",
-                prose: "65ch",
-                ...breakpoints(theme("screens")),
-                }),
-                                "minHeight": {
-                                    "0": "0px",
-                                    "full": "100%",
-                                    "screen": "100vh"
-                                },
-                                "minWidth": {
-                                    "0": "0px",
-                                    "full": "100%",
-                                    "min": "min-content",
-                                    "max": "max-content"
-                                },
-                                "objectPosition": {
-                                    "bottom": "bottom",
-                                    "center": "center",
-                                    "left": "left",
-                                    "left-bottom": "left bottom",
-                                    "left-top": "left top",
-                                    "right": "right",
-                                    "right-bottom": "right bottom",
-                                    "right-top": "right top",
-                                    "top": "top"
-                                },
-                                "opacity": {
-                                    "0": "0",
-                                    "5": "0.05",
-                                    "10": "0.1",
-                                    "20": "0.2",
-                                    "25": "0.25",
-                                    "30": "0.3",
-                                    "40": "0.4",
-                                    "50": "0.5",
-                                    "60": "0.6",
-                                    "70": "0.7",
-                                    "75": "0.75",
-                                    "80": "0.8",
-                                    "90": "0.9",
-                                    "95": "0.95",
-                                    "100": "1"
-                                },
-                                "order": {
-                                    "1": "1",
-                                    "2": "2",
-                                    "3": "3",
-                                    "4": "4",
-                                    "5": "5",
-                                    "6": "6",
-                                    "7": "7",
-                                    "8": "8",
-                                    "9": "9",
-                                    "10": "10",
-                                    "11": "11",
-                                    "12": "12",
-                                    "first": "-9999",
-                                    "last": "9999",
-                                    "none": "0"
-                                },
-                                "outline": {
-                                    "none": [
-                                        "2px solid transparent",
-                                        "2px"
-                                    ],
-                                    "white": [
-                                        "2px dotted white",
-                                        "2px"
-                                    ],
-                                    "black": [
-                                        "2px dotted black",
-                                        "2px"
-                                    ]
-                                },
-                                "padding": (theme) => theme("spacing"),
-                                "placeholderColor": (theme) => theme("colors"),
-                                "placeholderOpacity": (theme) => theme("opacity"),
-                                "ringColor": (theme) => ({
-                DEFAULT: theme("colors.blue.500", "#3b82f6"),
-                ...theme("colors"),
-                }),
-                                "ringOffsetColor": (theme) => theme("colors"),
-                                "ringOffsetWidth": {
-                                    "0": "0px",
-                                    "1": "1px",
-                                    "2": "2px",
-                                    "4": "4px",
-                                    "8": "8px"
-                                },
-                                "ringOpacity": (theme) => ({
-                DEFAULT: "0.5",
-                ...theme("opacity"),
-                }),
-                                "ringWidth": {
-                                    "0": "0px",
-                                    "1": "1px",
-                                    "2": "2px",
-                                    "4": "4px",
-                                    "8": "8px",
-                                    "DEFAULT": "3px"
-                                },
-                                "rotate": {
-                                    "0": "0deg",
-                                    "1": "1deg",
-                                    "2": "2deg",
-                                    "3": "3deg",
-                                    "6": "6deg",
-                                    "12": "12deg",
-                                    "45": "45deg",
-                                    "90": "90deg",
-                                    "180": "180deg",
-                                    "-180": "-180deg",
-                                    "-90": "-90deg",
-                                    "-45": "-45deg",
-                                    "-12": "-12deg",
-                                    "-6": "-6deg",
-                                    "-3": "-3deg",
-                                    "-2": "-2deg",
-                                    "-1": "-1deg"
-                                },
-                                "saturate": {
-                                    "0": "0",
-                                    "50": ".5",
-                                    "100": "1",
-                                    "150": "1.5",
-                                    "200": "2"
-                                },
-                                "scale": {
-                                    "0": "0",
-                                    "50": ".5",
-                                    "75": ".75",
-                                    "90": ".9",
-                                    "95": ".95",
-                                    "100": "1",
-                                    "105": "1.05",
-                                    "110": "1.1",
-                                    "125": "1.25",
-                                    "150": "1.5"
-                                },
-                                "sepia": {
-                                    "0": "0",
-                                    "DEFAULT": "100%"
-                                },
-                                "skew": {
-                                    "0": "0deg",
-                                    "1": "1deg",
-                                    "2": "2deg",
-                                    "3": "3deg",
-                                    "6": "6deg",
-                                    "12": "12deg",
-                                    "-12": "-12deg",
-                                    "-6": "-6deg",
-                                    "-3": "-3deg",
-                                    "-2": "-2deg",
-                                    "-1": "-1deg"
-                                },
-                                "space": (theme, { negative }) => ({
-                ...theme("spacing"),
-                ...negative(theme("spacing")),
-                }),
-                                "stroke": {
-                                    "current": "currentColor"
-                                },
-                                "strokeWidth": [
-                                    "0",
-                                    "1",
-                                    "2"
-                                ],
-                                "textColor": theme => ({
-                ...theme("colors"),
-                body: "#fff",
-                }),
-                                "textOpacity": (theme) => theme("opacity"),
-                                "transformOrigin": {
-                                    "center": "center",
-                                    "top": "top",
-                                    "top-right": "top right",
-                                    "right": "right",
-                                    "bottom-right": "bottom right",
-                                    "bottom": "bottom",
-                                    "bottom-left": "bottom left",
-                                    "left": "left",
-                                    "top-left": "top left"
-                                },
-                                "transitionDelay": {
-                                    "75": "75ms",
-                                    "100": "100ms",
-                                    "150": "150ms",
-                                    "200": "200ms",
-                                    "300": "300ms",
-                                    "500": "500ms",
-                                    "700": "700ms",
-                                    "1000": "1000ms"
-                                },
-                                "transitionDuration": {
-                                    "75": "75ms",
-                                    "100": "100ms",
-                                    "150": "150ms",
-                                    "200": "200ms",
-                                    "300": "300ms",
-                                    "500": "500ms",
-                                    "700": "700ms",
-                                    "1000": "1000ms",
-                                    "DEFAULT": "150ms"
-                                },
-                                "transitionProperty": {
-                                    "none": "none",
-                                    "all": "all",
-                                    "DEFAULT": "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
-                                    "colors": "background-color, border-color, color, fill, stroke",
-                                    "opacity": "opacity",
-                                    "shadow": "box-shadow",
-                                    "transform": "transform"
-                                },
-                                "transitionTimingFunction": {
-                                    "DEFAULT": "cubic-bezier(0.4, 0, 0.2, 1)",
-                                    "linear": "linear",
-                                    "in": "cubic-bezier(0.4, 0, 1, 1)",
-                                    "out": "cubic-bezier(0, 0, 0.2, 1)",
-                                    "in-out": "cubic-bezier(0.4, 0, 0.2, 1)"
-                                },
-                                "translate": (theme, { negative }) => ({
-                ...theme("spacing"),
-                ...negative(theme("spacing")),
-                "1\/2": "50%",
-                "1\/3": "33.333333%",
-                "2\/3": "66.666667%",
-                "1\/4": "25%",
-                "2\/4": "50%",
-                "3\/4": "75%",
-                full: "100%",
-                "-1\/2": "-50%",
-                "-1\/3": "-33.333333%",
-                "-2\/3": "-66.666667%",
-                "-1\/4": "-25%",
-                "-2\/4": "-50%",
-                "-3\/4": "-75%",
-                "-full": "-100%",
-                }),
-                                "width": (theme) => ({
-                auto: "auto",
-                ...theme("spacing"),
-                "1\/2": "50%",
-                "1\/3": "33.333333%",
-                "2\/3": "66.666667%",
-                "1\/4": "25%",
-                "2\/4": "50%",
-                "3\/4": "75%",
-                "1\/5": "20%",
-                "2\/5": "40%",
-                "3\/5": "60%",
-                "4\/5": "80%",
-                "1\/6": "16.666667%",
-                "2\/6": "33.333333%",
-                "3\/6": "50%",
-                "4\/6": "66.666667%",
-                "5\/6": "83.333333%",
-                "1\/12": "8.333333%",
-                "2\/12": "16.666667%",
-                "3\/12": "25%",
-                "4\/12": "33.333333%",
-                "5\/12": "41.666667%",
-                "6\/12": "50%",
-                "7\/12": "58.333333%",
-                "8\/12": "66.666667%",
-                "9\/12": "75%",
-                "10\/12": "83.333333%",
-                "11\/12": "91.666667%",
-                full: "100%",
-                screen: "100vw",
-                min: "min-content",
-                max: "max-content",
-                }),
-                                "zIndex": {
-                                    "0": "0",
-                                    "10": "10",
-                                    "20": "20",
-                                    "30": "30",
-                                    "40": "40",
-                                    "50": "50",
-                                    "auto": "auto"
-                                }
-                            }
-                        }
-                    }
-                ],
-            };
-        </script>
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
-        <style>
-            .formkit-form[data-uid="88d43b5014"] {
-                max-width: 100% !important;
-            }
-        </style>
-    </head>
-  <body class="antialiased bg-body text-body font-body">
-    <div>
-      <!-- <p class="py-4 bg-green-500 text-black text-center">Want to learn how to build websites like this one? <a href="https://ignitevisionmedia.com/homepage/"><b>Ignite Vision Media</b></a></p> -->
-      <section x-data="{ mobileNavOpen: false }">
-        <div class="container px-4 mx-auto">
-          <div class="flex items-center justify-between pt-5 pb-2.5 -m-2">
-            <div class="w-auto p-2">
-              <div class="flex flex-wrap items-center">
-                <div class="w-auto"><a class="relative z-10 inline-block" href="index.php"><img class="h-[50px]" src="images/logo.png" alt=""/></a></div>
-              </div>
-            </div>
-            <div class="w-auto p-2">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-auto hidden lg:block">
-                        <ul class="flex items-center mr-12">
-                            <li class="mr-12 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="affiliate.php">Our Offers</a></li>
-                            <!-- <li class="mr-12 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="pricing.html">Pricing</a></li>
-                            <li class="mr-12 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="blog.html">Blog</a></li> -->
-                            <li class="text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="contact.php">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- <div class="w-auto hidden lg:block">
-                        <div class="inline-block"><a class="inline-block px-8 py-4 text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300" href="login.html">Login</a></div>
-                    </div> -->
-                    <div class="w-auto lg:hidden">
-                        <button class="relative z-10 inline-block" x-on:click="mobileNavOpen = !mobileNavOpen">
-                            <svg class="text-green-500" width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="56" height="56" rx="28" fill="currentColor"></rect>
-                            <path d="M37 32H19M37 24H19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="hidden fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50" :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}">
-          <div class="fixed inset-0 bg-black opacity-60" x-on:click="mobileNavOpen = !mobileNavOpen"></div>
-          <nav class="relative z-10 px-9 pt-8 h-full bg-black overflow-y-auto">
-            <div class="flex flex-wrap justify-between h-full">
-              <div class="w-full">
-                <div class="flex items-center justify-between -m-2">
-                  <div class="w-auto p-2"><a class="inline-block" href="index.php"><img class="h-[50px]" src="images/logo.png" alt=""/></a></div>
-                  <div class="w-auto p-2">
-                    <button class="inline-block text-white" x-on:click="mobileNavOpen = !mobileNavOpen">
-                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col justify-center py-16 w-full">
-                <ul>
-                  <li class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="affiliate.php">Our Offers</a></li>
-                  <!-- <li class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="pricing.html">Pricing</a></li>
-                  <li class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="blog.html">Blog</a></li> -->
-                  <li class="text-white font-medium hover:text-opacity-90 tracking-tighter"><a href="contact.php">Contact</a></li>
-                </ul>
-              </div>
-              <div class="flex flex-col justify-end w-full pb-8"><a class="inline-block px-8 py-4 text-center text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300" href="login.html">Login</a></div>
-            </div>
-          </nav>
-        </div>
-      </section>
-      <section class="py-20 overflow-hidden">
-        <div class="container px-4 mx-auto">
-          <div class="md:max-w-4xl text-center mx-auto"><span class="inline-block mb-4 text-2xl text-green-400 font-medium tracking-tighter">Send us a message</span>
-            <h2 class="font-heading mb-8 text-7xl lg:text-8xl text-white tracking-7xl lg:tracking-8xl">Send us a message and our team will get back to you</h2>
-            <p class="mb-10 text-gray-300">Strategic branding agency focused on brand creation, rebrands, and brand</p>
-            <!-- <div class="w-100">
-                <script async data-uid="88d43b5014" src="https://astrologyvault.kit.com/88d43b5014/index.js"></script>
-            </div> -->
-            <!-- <div class="flex flex-wrap -m-2 mb-10">
-              <div class="w-full md:w-1/2 p-2">
-                <div class="mb-2 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl">
-                  <input class="pl-6 pr-16 py-4 text-gray-300 w-full placeholder-gray-300 outline-none bg-transparent" type="text" placeholder="First name"/>
-                </div>
-              </div>
-              <div class="w-full md:w-1/2 p-2">
-                <div class="mb-2 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl">
-                  <input class="pl-6 pr-16 py-4 text-gray-300 w-full placeholder-gray-300 outline-none bg-transparent" type="text" placeholder="Last Name"/>
-                </div>
-              </div>
-              <div class="w-full p-2">
-                <div class="mb-2 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl">
-                  <input class="pl-6 pr-16 py-4 text-gray-300 w-full placeholder-gray-300 outline-none bg-transparent" type="text" placeholder="E-mail"/>
-                </div>
-              </div>
-            </div> -->
-            <div class="flex flex-wrap justify-center max-w-xs mx-auto mb-6">
-              <div class="w-full"><a href="mailto:admin@ignitevisionmedia.com" class="text-2xl block px-14 py-4 text-center font-medium tracking-2xl border-2 border-green-400 bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300" href="#">Contact Us</a></div>
-            </div>
-            <p class="text-sm text-gray-300 max-w-xs mx-auto">Your information will be used accordane with our Privacy Policy. You may opf out at any time</p>
-          </div>
-        </div>
-      </section>
-      <!-- <section class="py-12">
-        <div class="container px-4 mx-auto">
-          <div class="relative pt-20 px-4 bg-gray-900 bg-opacity-20 overflow-hidden rounded-6xl">
-            <div class="text-center md:max-w-xl mx-auto removed pb-20"><span class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter">Learn to code</span>
-              <h2 class="font-heading mb-6 text-7xl text-white tracking-8xl">Want to build templates like this one?</h2><a class="mb-8 text-gray-300 relative z-10" href="contact.php">Contact us and learn to become a frontend web developer today</a><img class="absolute -bottom-24 right-0 z-0" src="template-assets/images/application-section/lines2.png" alt=""/>
-            </div>
-          </div>
-        </div>
-      </section> -->
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us · Ignite Vision Media</title>
+  <meta name="description" content="Get in touch with the Ignite Vision Media team." />
+  <link rel="icon" href="/homepage/favicon.png" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a0b0d;--bg-2:#0e1013;--surface:#14171c;--surface-2:#191d23;
+    --line:rgba(255,255,255,0.09);--line-2:rgba(255,255,255,0.14);
+    --ink:#f4f6f3;--muted:#9aa39a;--faint:#6b736c;--lime:#bef264;--lime-dim:#a3d95a;
+    --radius:18px;--maxw:1180px;
+    --font:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --display:"Clash Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
+  .eyebrow::before{content:"";width:20px;height:1px;background:var(--lime);opacity:.7}
+  header.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);background:rgba(10,11,13,.78);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand img{height:40px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-link{color:var(--muted);font-weight:500;font-size:15px;padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
+  .nav-link:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+  .nav-cta{color:var(--bg);background:var(--lime);font-weight:650}
+  .nav-cta:hover{background:#cdf87f}
+  .page-hero{position:relative;overflow:hidden;padding:88px 0 44px}
+  .page-hero .glow{position:absolute;inset:-30% -10% auto -10%;height:520px;pointer-events:none;z-index:0;
+    background:radial-gradient(640px 340px at 74% 0%,rgba(190,242,100,.15),transparent 60%)}
+  .page-hero .inner{position:relative;z-index:1}
+  .page-hero h1{font-family:var(--display);font-weight:600;letter-spacing:-.025em;
+    font-size:clamp(38px,6vw,68px);line-height:1.02;margin:18px 0 0;text-wrap:balance}
+  .page-hero h1 .accent{color:var(--lime)}
+  .page-hero p.sub{color:var(--muted);font-size:clamp(16px,1.9vw,20px);max-width:56ch;margin:18px 0 0}
+  footer.foot{border-top:1px solid var(--line);padding:46px 0 52px;background:var(--bg-2);margin-top:72px}
+  .foot-inner{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+  .brand.small img{height:34px}
+  .foot-links{display:flex;flex-wrap:wrap;gap:8px 22px}
+  .foot-links a{color:var(--muted);font-size:14px}
+  .foot-links a:hover{color:var(--ink)}
+  .foot-meta{color:var(--faint);font-size:13px;line-height:1.6;margin-top:24px}
+  .foot-meta a{color:var(--lime-dim)}
+  /* prose (legal) */
+  .prose{max-width:760px;margin:8px 0 0;font-size:16.5px;color:var(--muted)}
+  .prose h2{font-family:var(--display);font-weight:600;color:var(--ink);font-size:clamp(20px,2.4vw,26px);
+    letter-spacing:-.01em;line-height:1.2;margin:44px 0 6px;text-wrap:balance}
+  .prose h2:first-child{margin-top:8px}
+  .prose h3{color:var(--ink);font-weight:650;font-size:16.5px;letter-spacing:.02em;margin:30px 0 6px}
+  .prose p{margin:14px 0}
+  .prose a{color:var(--lime-dim);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+  .prose ul{margin:14px 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  .prose ul li{position:relative;padding-left:26px}
+  .prose ul li::before{content:"";position:absolute;left:2px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--lime);opacity:.85}
+  .prose address{font-style:normal;color:var(--ink);background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:16px 18px;display:inline-block;margin:14px 0;line-height:1.7}
+  .prose .updated{font-size:13.5px;color:var(--faint);letter-spacing:.02em}
+  /* contact */
+  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .ccard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+  .ccard .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(190,242,100,.12);
+    color:var(--lime);border:1px solid rgba(190,242,100,.25)}
+  .ccard .ic svg{width:22px;height:22px}
+  .ccard h3{font-family:var(--display);font-weight:600;font-size:19px;margin:18px 0 6px}
+  .ccard p{color:var(--muted);font-size:14.5px;margin:0 0 18px}
+  .ccard .mail{margin-top:auto;color:var(--lime-dim);font-weight:600;font-size:15px;word-break:break-word}
+  .ccard address{font-style:normal;color:var(--ink);font-size:15px;line-height:1.65;margin-top:auto}
+  @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+  @media(max-width:560px){.nav-link.hide-sm{display:none}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
 
-    <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
-    <div class="mx-auto md:w-8/12">
-        <div class="grid grid-cols-1 md:grid-cols-4 mt-8">
-            <p class="border-r-2 border-r-gray-500">
-                <a href="/content/privacy-policy.php" target="_blank" class="text-blue-600 hover:underline">Privacy Policy</a>
-            </p>
-            <p class="border-r-2 border-r-gray-500">
-                <a href="/content/terms-conditions.php" target="_blank" class="text-blue-600 hover:underline">Terms & Conditions</a>
-            </p>
-            <p class="border-r-2 border-r-gray-500">
-                <a href="mailto:admin@ignitevisionmedia.com" class="text-blue-600 hover:underline">Contact Us</a>
-            </p>
-            <p>
-                <a href="/content/refund-return-policy.php" target="_blank" class="text-blue-600 hover:underline">Refund & Return Policy</a>
-            </p>
-        </div>
-        <div class="py-4">
-            <!--Copyright &copy; 2025 Ignite Vision Media. All Right Reserved.-->
-            <p>© Copyright Ignitist Pte Ltd.</p>
-            <p>CRN: 201931552E. All Rights Reserved.</p>
-        </div>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/homepage/index.php"><img src="/homepage/images/logo.png" alt="Ignite Vision Media" /></a>
+    <nav class="nav-links">
+      <a class="nav-link hide-sm" href="/homepage/index.php">Home</a>
+      <a class="nav-link hide-sm" href="/homepage/affiliate.php">Affiliates</a>
+      <a class="nav-link nav-cta" href="/homepage/contact.php">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="glow"></div>
+  <div class="wrap inner">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's <span class="accent">talk.</span></h1>
+    <p class="sub">Questions about an offer, a partnership, or your affiliate account? Reach the right team below and we'll get back to you.</p>
+  </div>
+</section>
+<main class="wrap">
+  <div class="cgrid">
+    <div class="ccard">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+      <h3>General enquiries</h3>
+      <p>Questions about our products, the company, or anything else.</p>
+      <a class="mail" href="mailto:admin@ignitevisionmedia.com">admin@ignitevisionmedia.com</a>
     </div>
-</footer>  </body>
+    <div class="ccard">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3>Affiliate support</h3>
+      <p>Promoting our offers? Reach the partnerships team here.</p>
+      <a class="mail" href="mailto:affiliate@ignitevisionmedia.com">affiliate@ignitevisionmedia.com</a>
+    </div>
+    <div class="ccard">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h3>Mailing address</h3>
+      <p>Returns and postal correspondence.</p>
+      <address>205/124 James Street<br>Leichhardt, NSW 2040<br>Australia</address>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-inner">
+      <a class="brand small" href="/homepage/index.php"><img src="/homepage/images/logo.png" alt="Ignite Vision Media" /></a>
+      <nav class="foot-links">
+        <a href="/content/privacy-policy.php">Privacy Policy</a>
+        <a href="/content/terms-conditions.php">Terms &amp; Conditions</a>
+        <a href="/content/refund-return-policy.php">Refund &amp; Return Policy</a>
+        <a href="/homepage/affiliate.php">Affiliates</a>
+        <a href="/homepage/contact.php">Contact Us</a>
+      </nav>
+    </div>
+    <p class="foot-meta">&copy; Copyright Ignitist Pte Ltd. CRN: 201931552E. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
 </html>

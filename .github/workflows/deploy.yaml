@@ -6,7 +6,9 @@ on:
     paths:
       - 'homepage/affiliate.php'
       - 'homepage/index.php'
+      - 'homepage/contact.php'
       - 'homepage/images/**'
+      - 'content/**'
   workflow_dispatch:
 
 jobs:
@@ -46,8 +48,12 @@ jobs:
             open -p ${FTP_PORT} -u '${FTP_USERNAME}','${FTP_PASSWORD}' '${FTP_SERVER}';
             put -O '${DIR}homepage' 'homepage/affiliate.php';
             put -O '${DIR}homepage' 'homepage/index.php';
+            put -O '${DIR}homepage' 'homepage/contact.php';
             put -O '${DIR}homepage/images' 'homepage/images/soul-mirror-reading.png';
-            cls -l '${DIR}homepage/affiliate.php' '${DIR}homepage/index.php';
+            put -O '${DIR}content' 'content/privacy-policy.php';
+            put -O '${DIR}content' 'content/terms-conditions.php';
+            put -O '${DIR}content' 'content/refund-return-policy.php';
+            cls -l '${DIR}homepage/contact.php' '${DIR}content/privacy-policy.php';
             bye
           "
-          echo "Uploaded homepage/affiliate.php + homepage/index.php + homepage/images/soul-mirror-reading.png"
+          echo "Uploaded index/affiliate/contact + 3 content legal pages"
