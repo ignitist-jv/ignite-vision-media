@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7614509729474530"
+     crossorigin="anonymous"></script>
   <title>Contact Us · Ignite Vision Media</title>
   <meta name="description" content="Get in touch with the Ignite Vision Media team." />
   <link rel="icon" href="/homepage/favicon.png" />

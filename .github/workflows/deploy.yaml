@@ -9,6 +9,7 @@ on:
       - 'homepage/contact.php'
       - 'homepage/images/**'
       - 'content/**'
+      - 'ads.txt'
   workflow_dispatch:
 
 jobs:
@@ -54,6 +55,7 @@ jobs:
             put -O '${DIR}content' 'content/privacy-policy.php';
             put -O '${DIR}content' 'content/terms-conditions.php';
             put -O '${DIR}content' 'content/refund-return-policy.php';
+            put -O '${DIR}' 'ads.txt';
             cls -l '${DIR}homepage/contact.php' '${DIR}content/privacy-policy.php';
             bye
           "

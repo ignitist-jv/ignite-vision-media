@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7614509729474530"
+     crossorigin="anonymous"></script>
   <title>Privacy Policy · Ignite Vision Media</title>
   <meta name="description" content="How Ignite Vision Media collects, uses, and protects your information." />
   <link rel="icon" href="/homepage/favicon.png" />
