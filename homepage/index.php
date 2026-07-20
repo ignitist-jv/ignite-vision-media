@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7614509729474530"
      crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-7614509729474530">
   <title>Ignite Vision Media · Ignite Your Future. Elevate Your Soul.</title>
   <meta name="description" content="Ignite Vision Media is a performance-driven digital publishing company building high-converting personal development products that deliver real transformation." />
   <link rel="icon" href="favicon.png" />

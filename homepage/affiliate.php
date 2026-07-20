@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7614509729474530"
      crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-7614509729474530">
   <title>Affiliate Hub · Ignite Vision Media</title>
   <meta name="description" content="Promote high-converting personal development offers. Tracked affiliate links, swipe files, and creatives for every Ignite Vision Media offer." />
   <link rel="icon" href="favicon.png" />
