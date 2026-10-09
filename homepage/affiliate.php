@@ -279,7 +279,7 @@
           <img src="https://getbirthcode.com/the-birth-code-card.png" alt="The Birth Code" />
         </div>
         <div class="card-body">
-          <span class="card-tag" style="color: var(--lime);">New &middot; Numerology &middot; Wealth</span>
+          <span class="card-tag">Numerology &middot; Wealth</span>
           <h3>The Birth Code</h3>
           <p>Personalized numerology reading that names the visitor&rsquo;s Closed Gate, the one digit working against the other two.</p>
           <a class="cta" href="https://getbirthcode.com/affiliate" target="_blank" rel="noopener">Access Affiliate Tools
