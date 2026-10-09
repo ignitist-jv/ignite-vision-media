@@ -220,7 +220,7 @@
     <h1 class="hero-title">Promote offers that <span class="accent">change lives</span>, and get paid for it.</h1>
     <p class="hero-sub">Whether you are a seasoned marketer or just getting started, everything you need is here: tracked affiliate links, swipe files, and creatives for every one of our high-converting personal development offers.</p>
     <div class="hero-chips">
-      <span class="chip"><span class="dot"></span>6 live offers</span>
+      <span class="chip"><span class="dot"></span>8 live offers</span>
       <span class="chip"><span class="dot"></span>Swipes &amp; creatives included</span>
       <span class="chip"><span class="dot"></span>Tracked hoplinks</span>
     </div>
@@ -258,6 +258,35 @@
     </div>
 
     <div class="grid">
+      <!-- Eastern Star Reading -->
+      <article class="card">
+        <div class="card-media wide">
+          <img src="https://easternstarchart.com/eastern-star-card.png" alt="Eastern Star Reading" />
+        </div>
+        <div class="card-body">
+          <span class="card-tag" style="color: var(--lime);">New &middot; Astrology</span>
+          <h3>Eastern Star Reading</h3>
+          <p>Personalized astrology reading that reveals the half of the visitor&rsquo;s sign they were never given.</p>
+          <a class="cta" href="https://easternstarchart.com/affiliate" target="_blank" rel="noopener">Access Affiliate Tools
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- The Birth Code -->
+      <article class="card">
+        <div class="card-media wide">
+          <img src="https://getbirthcode.com/the-birth-code-card.png" alt="The Birth Code" />
+        </div>
+        <div class="card-body">
+          <span class="card-tag" style="color: var(--lime);">New &middot; Numerology &middot; Wealth</span>
+          <h3>The Birth Code</h3>
+          <p>Personalized numerology reading that names the visitor&rsquo;s Closed Gate, the one digit working against the other two.</p>
+          <a class="cta" href="https://getbirthcode.com/affiliate" target="_blank" rel="noopener">Access Affiliate Tools
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
       <article class="card">
         <div class="card-media wide">
           <img src="images/soul-mirror-reading.png?v=2" alt="Soul Mirror Reading" />
@@ -396,3 +425,4 @@
 
 </body>
 </html>
+
